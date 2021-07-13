@@ -1,0 +1,133 @@
+.poster {
+  height: 250px;
+  width: 200px;
+  position: relative;
+  cursor: pointer;
+}
+
+.poster .img-container {
+  height: 75%;
+  overflow: hidden;
+  background: beige;
+  border-bottom: 5px solid red;
+}
+
+.poster .img-container img {
+  height: 100%;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.poster .details {
+  background: black;
+  height: 25%;
+  position: relative;
+}
+
+.poster .details p {
+  color: white;
+  margin: 0;
+  padding: 16px;
+  z-index: 2;
+  position: relative;
+}
+
+.poster .details .curtain {
+  background: red;
+  height: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.poster:hover .img-container img {
+  transform: scale(1.1);
+}
+
+.poster:hover .details .curtain {
+  height: 100%;
+}
+
+.poster:after {
+  content: "";
+  height: 0px;
+  width: 0px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent white white transparent;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+}
+
+.details-container {
+  display: flex;
+  justify-content: center;
+}
+
+.details-container .details {
+  margin-left: 30px;
+}
+
+.details-container .details .title {
+  font-size: 40px;
+  color: #61acef;
+}
+
+.hero-poster-container {
+  min-width: 400px;
+  border: 3px solid #c3a3a3;
+  min-height: 620px;
+  background: #8360c3;  /* fallback for old browsers */
+  background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.powerstats-info h2 {
+  font-size: 21px;
+  margin-top: 12px;
+  columns: #24242a;
+}
+
+.powerstats-holder {
+  height: 20px;
+  width: 300px;
+  border-radius: 20px;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  position: relative;
+  padding: 3px;
+}
+
+.powerstat {
+  box-sizing: border-box;
+  height: 100%;
+  width: 0;
+  transition: 0.3s ease-in all;
+  border-radius: 20px;
+}
+
+.powerstat.combat {
+  background: #ffbb34;
+}
+
+.powerstat.durability {
+  background: #e52d69;
+}
+
+.powerstat.intelligence {
+  background: #2eb4e7;
+}
+
+.powerstat.power {
+  background: #3ecc68;
+}
+
+.powerstat.speed {
+  background: #cd3d3d;
+}
+
+.powerstat.strength {
+  background: #cb28a1;
+}
